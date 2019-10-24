@@ -2,11 +2,12 @@
 # vars file for configure_firewall
 services_to_enable:
   - "httpd"
+  - "firewalld"
 
 firewall_services:
   - "http"
 
 security_packages:
   - "httpd"
-  - "cowsay"
   - "nmap"
+  - "firewalld"

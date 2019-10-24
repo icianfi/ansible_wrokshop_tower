@@ -16,6 +16,6 @@
     service: "{{ item }}"
     permanent: true
     state: enabled
-    inmediate: true
+    immediate: true
   with_items: "{{ firewall_services }}"
 
