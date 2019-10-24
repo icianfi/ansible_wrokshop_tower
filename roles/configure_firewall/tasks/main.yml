@@ -4,18 +4,18 @@
   yum:
     name: "{{ item }}"
     stated: latest
-  with_items: security_packages
+  with_items: "{{ security_packages }}"
 - name: firewalld enabled and running
   service: 
     name: "{{ item }}"
     enabled: true
     state: started
-  with_items: services_to_enabled
+  with_items: "{{ services_to_enabled }}"
 - name: configure firewalld 
   firewalld: 
     service: "{{ item }}"
     permanent: true
     state: enabled
     inmediate: true
-  with_items: firewall_services
+  with_items: "{{ firewall_services }}"
 

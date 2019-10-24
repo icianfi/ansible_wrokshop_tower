@@ -6,7 +6,7 @@
     state: latest
   tags:
     - cowsay
-- name: Alache enabled and running
+- name: Apache enabled and running
   service:
     name: httpd
     enabled: true
