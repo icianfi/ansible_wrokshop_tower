@@ -3,7 +3,7 @@
 - name: latest firewalld version installed
   yum:
     name: "{{ item }}"
-    stated: latest
+    state: latest
   with_items: "{{ security_packages }}"
 - name: firewalld enabled and running
   service: 
